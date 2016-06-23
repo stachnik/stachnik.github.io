@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width">
+	<title>Burgermania</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
+	<style>
+      #map {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<h1>Burgermania</h1>
+			<p>Z miłości do burgerów!</p>
+		</div>
+	</header>
+	<nav class="nav">
+		<div class="container">
+			<ul>
+				<li><a href="#o-nas">O nas</a></li>
+				<li><a href="#oferta">Oferta</a></li>
+				<li><a href="#gdzie">Gdzie jesteśmy?</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
+			</ul>
+		</div>
+	</nav>
+	<section class="section" id="o-nas">
+		<div class="container">
+			<h2>O nas</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Commodi illum asperiores, cumque, sapiente ratione, <br> quos neque, quia magnam sint quas tempore ex unde <br>laudantium recusandae consectetur ipsam similique et rerum.</p>
+		</div>
+	</section>
+	<section class="section" id="oferta">
+		<div class="container">
+			<h2 style='text-align: center;'>Oferta</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolores excepturi odit, debitis, magni quibusdam architecto consequuntur eum, natus corrupti vero corporis repudiandae ea molestias hic iusto saepe! Nemo, repellat! <br>
+			Deserunt nemo dignissimos enim voluptates, totam ipsum inventore, molestias exercitationem minima, rem neque tenetur. Veniam nesciunt architecto, nulla, modi odio earum qui, dolores pariatur reprehenderit, necessitatibus amet error numquam quasi. <br>
+			Temporibus accusamus cupiditate beatae magni incidunt, possimus! Delectus dolorum quod porro, rerum dolores distinctio, modi assumenda officiis, minima consequatur molestias numquam, fuga temporibus. Sit obcaecati eius fugiat neque non veniam. <br>
+			Asperiores earum, a veniam iure nam aliquam! Mollitia similique obcaecati quis accusamus, provident id doloremque, nobis corporis facilis veniam eaque illum recusandae, totam fugit minima eveniet libero ducimus nesciunt sed.</p>
+		</div>
+	</section>
+	<section class="section" id="gdzie">
+		<div class="container">
+			<h2 style='text-align: center;'>Gdzie jesteśmy?</h2>
+			<div class="img">
+			<img src="http://barosowa.pl/images/mapka-osowa.png" style=" height: 80%; width: 80%; padding: 0 0 0 150px;">
+			</div>
+		</div>
+	</section>
+	<section class="section" id="kontakt">
+		<div class="container">
+			<h2>Kontakt</h2>
+			<p>Norwida 16 <br> 55-200 Oława <br> tel. 542 125 152</p>
+		</div>
+	</section>
+	<footer class="footer">
+		<p>&copy; shynka, 2016.</p>
+	</footer>
+
+	<script src="jquery-3.0.0.js"></script>
+	<script src="stickyfill.js"></script>
+	<script>
+		$('.nav').Stickyfill();
+
+		$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+</body>
+</html>
